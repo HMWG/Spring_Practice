@@ -1,5 +1,6 @@
 package hanium.crud_practice.service;
 
+import hanium.crud_practice.aop.TImeTraceAop;
 import hanium.crud_practice.repository.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -37,6 +38,11 @@ public class SpringConfig {
     public MemberService memberService(){
         return new MemberService(memberRepository);
     }
+
+/*    @Bean
+    public TImeTraceAop tImeTraceAop(){
+        return new TImeTraceAop();
+    }*/
 
  //   @Bean
  //   public MemberRepository memberRepository() {
